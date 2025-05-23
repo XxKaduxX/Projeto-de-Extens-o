@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Registro de Pedidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Registro de Pedidos</h1>
+
+  <form id="pedidoForm">
+    <input type="text" id="nome" placeholder="Nome do Cliente" required>
+    <textarea id="descricao" placeholder="Descrição do Pedido" required></textarea>
+    <label for="dataRegistro">dataRegistro</label>
+    <input type="date" id="dataRegistro" required>
+    <label for="dataTermino">dataTermino</label>
+    <input type="date" id="dataTermino" required>
+    <input type="text" id="contato1" placeholder="Contato 1" required>
+    <input type="text" id="contato2" placeholder="Contato 2" required>
+    <button type="submit">Registrar Pedido</button>
+  </form>
+<button id="exportarPdf">Exportar como PDF</button>
+
+  <table id="tabelaPedidos">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Data de Registro</th>
+        <th>Data de Término</th>
+        <th>Contato 1</th>
+        <th>Contato 2</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
